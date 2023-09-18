@@ -1,0 +1,27 @@
+services:
+    db:
+        image: mariadb:11.1.2-jammy
+        environment:
+            MARIADB_USER: portal
+            MARIADB_PASSWORD: portal
+            MARIADB_DATABASE: portal
+            MARIADB_ROOT_PASSWORD: root
+            # MARIADB_ROOT_HOST: 
+            # MARIADB_MYSQL_LOCALHOST_USER: 
+            # MARIADB_INITDB_SKIP_TZINFO: 
+        ports:
+            - 3306:3306
+        volumes:
+            - "../backups/portal:/docker-entrypoint-initdb.d"
+            - "../volumes/data-portal:/var/www/html/portal"
+
+    portal:
+        image: cms_portal
+        build:
+            context: .
+            dockerfile: ./Dockerfile
+        ports:
+            - 80:80
+        volumes:
+            - './confs/extra.ini:/usr/local/etc/php/conf.d/opcache-recommended.ini'
+            - "../wordpress_source:/var/www/html/portal"

@@ -1,0 +1,26 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../wordpress__theme_zl23"
+		},
+		{
+			"path": "../wordpress__plugin__ifrn-ead"
+		},
+		{
+			"path": "../wordpress__plugin_lean_more"
+		},
+		{
+			"path": "../wordpress__plugin__suap-sso"
+		},
+		{
+			"path": "../wordpress_source"
+		},
+		{
+			"path": "../backups"
+		}
+	],
+	"settings": {}
+}
