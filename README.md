@@ -4,7 +4,8 @@ Workspace para desenvolvimento do Wordpress no ZL/IFRN
 > O pasta `projetos` usada neste tutorial é de sua escolha e responsabilidade.
 
 Baixar o projeto e abrir
-```
+
+```bash
 cd projetos
 mkdir portal
 cd portal
@@ -15,17 +16,21 @@ code wordpress__workspace.code-workspace
 ```
 
 
-Para restaurar o banco, coloque o arquivo de restore do banco em `projetos/portal/backups/portal`, e o de restore do wordpress em `projetos/portal/wordpress_source`
+Para restaurar o portal:
+1. Coloque o arquivo de restore do **banco** em `projetos/portal/backups/portal`
+2. Coloque o arquivo de restore do **wordpress** em `projetos/portal/wordpress_source`
 
 Fazer o build e subir
-```
+```bash
 cd projetos/portal/wordpress__workspace
 docker compose build
 docker compose up
 ```
 
+Acesse http://localhost/portal/
 
-```
+
+```bash
 cd projetos/portal/wordpress__workspace
 docker compose down && sudo rm -rf ../volumes/data-portal && docker compose up
 ```
