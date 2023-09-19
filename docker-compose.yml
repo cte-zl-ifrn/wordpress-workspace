@@ -25,6 +25,7 @@ services:
         volumes:
             - './confs/extra.ini:/usr/local/etc/php/conf.d/opcache-recommended.ini'
             - "../wordpress_source:/var/www/html/portal"
+            - "../wordpress__theme_zl23:/var/www/html/portal/wp-content/themes/zl23"
 
     sass:
         image: sass
