@@ -27,10 +27,15 @@ docker compose build
 docker compose up
 ```
 
+Para instalar plugins será necessário adicionar a linha `define('FS_METHOD', 'direct');` na antepenúltima linha do `wp-config.php`.
+
 Acesse http://localhost/portal/
+
+
 
 
 ```bash
 cd projetos/portal/wordpress__workspace
 docker compose down && sudo rm -rf ../volumes/data-portal && docker compose up
 ```
+

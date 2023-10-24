@@ -5,4 +5,4 @@ RUN apt-get update && \
 	apt-get install -y node-node-sass vim
 
 WORKDIR /theme_zl23/
-CMD ["node-sass", "--watch", "/theme_zl23/assets/scss/main.scss", "/theme_zl23/assets/css/all.css"]
+CMD ["node-sass", "--watch", "/theme_zl23/assets/scss/main.sass", "/theme_zl23/assets/css/all.css"]
