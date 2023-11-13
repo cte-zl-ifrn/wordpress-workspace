@@ -18,7 +18,17 @@ code wordpress__workspace.code-workspace
 
 Para restaurar o portal:
 1. Coloque o arquivo de restore do **banco** em `projetos/portal/backups/portal`
-2. Coloque o arquivo de restore do **wordpress** em `projetos/portal/wordpress_source`
+   1. Modificar as duas primeiras linhas da tabela wp_options para http://localhost/portal
+      | option_id | option_name | option_value            |
+      |-----------|-------------|-------------------------|
+      | 1         | siteurl     | http://localhost/portal |
+      | 2         | home        | http://localhost/portal |
+    2. Ainda em wp_options mudar template para zl23
+       | option_id | option_name | option_value   |
+       |-----------|-------------|----------------|
+       | 41        | template    | zl23           |
+
+3. Coloque o arquivo de restore do **wordpress** em `projetos/portal/wordpress_source`
 
 Fazer o build e subir
 ```bash
